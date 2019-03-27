@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LSI-Loading</title>
+        <meta charset="utf-8">
+
+        <!-- LSILoading -->
+        <script src="lsi-loading/script.js"></script>
+        <link rel="stylesheet" type="text/css" href="lsi-loading/estilo.css">
+    </head>
+    <body>
+
+        <!-- alvo: elemento onde o loading será renderizado -->
+        <div id="loading-cont"></div>
+
+        <button type="button" id="btnLoadingMostra">Mostrar</button>
+        <button type="button" id="btnLoadingEsconde">Esconde</button>
+        <button type="button" id="btnLoadingToggle" onclick="loading.toggle();">Toggle</button>
+
+    </body>
+    <script>
+        // Instanciando o loading:
+        // primeiro (e único) argumento é relativo ao querySelector do alvo
+        var loading = LSILoading('#loading-cont');
+
+        // para instanciar já exposto:
+        //var loading = LSILoading('#loading-cont').mostra();
+
+        // adicionando os métodos nos botões
+        document.getElementById('btnLoadingMostra').addEventListener(
+            'click',
+            function(){
+                loading.mostra();
+            },
+            false
+        );
+
+        document.getElementById('btnLoadingEsconde').onclick = function(){
+            loading.esconde();
+        }
+    </script>
+</html>
