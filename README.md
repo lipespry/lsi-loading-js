@@ -2,6 +2,8 @@
 
 Ilustração de carregamento animada para páginas HTML - manipulado via JavaScript.
 
+## [Demonstração](https://lipespry.github.io/lsi-loading-js/demo.html)
+
 ## Sintaxe:
 ```javascript
 LSILoading(seletor)
