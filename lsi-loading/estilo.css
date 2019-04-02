@@ -68,19 +68,19 @@ div.lsi-loading {
     background-image: url(loading.png);
     background-position: center center;
     background-repeat: no-repeat;
-    height: 0;
-    background-size: 0 0;
+    height: 80px;
+    background-size: 100% 100%;
     opacity: 0;
 }
 div.lsi-loading.mostra {
     animation:
         lsi-loading-rot 2s infinite linear,
-        lsi-loading-mostra 1s 1 forwards;
+        lsi-loading-mostra 1.5s 1 forwards;
 }
 div.lsi-loading.esconde {
     animation:
         lsi-loading-rot 2s infinite linear,
-        lsi-loading-esconde 1s 1 forwards;
+        lsi-loading-esconde 0.5s 1 forwards;
 }
 @keyframes lsi-loading-rot {
     to {
@@ -89,15 +89,11 @@ div.lsi-loading.esconde {
 }
 @keyframes lsi-loading-mostra {
     to {
-        height: 80px;
-        background-size: 80px 80px;
         opacity: 1;
     }
 }
 @keyframes lsi-loading-esconde {
     from {
-        height: 80px;
-        background-size: 80px 80px;
         opacity: 1;
     }
 }

@@ -69,7 +69,6 @@ var LSILoading = (function(seletorAlvo){
         if (this.alvo === null)
             throw new Error('Alvo não encontrado');
 
-        // criação do elemento html
         this.loading = document.createElement('div');
         this.loading.classList.add('lsi-loading');
         this.alvo.appendChild(this.loading);
@@ -83,7 +82,6 @@ var LSILoading = (function(seletorAlvo){
         clearTimeout(this.timeout);
         if (this.loading.classList.contains('esconde'))
             this.loading.classList.remove('esconde');
-        this.loading.style.display = 'block';
         this.loading.classList.add('mostra');
         return this;
     }
@@ -95,9 +93,6 @@ var LSILoading = (function(seletorAlvo){
         if (this.loading.classList.contains('mostra')) {
             this.loading.classList.remove('mostra');
             this.loading.classList.add('esconde');
-            this.timeout = setTimeout(function(){
-                inst.loading.style.display = 'none';
-            }, 1000);
         }
         return this;
     }
